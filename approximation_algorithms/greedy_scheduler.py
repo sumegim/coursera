@@ -14,5 +14,5 @@ def schedule(m, jobs):
 for file_idx in range (1, 4):
     with open(f'inputJobs{file_idx}.txt') as f:
         lines = f.readlines()
-        m = int(lines[0][0])
+        m = int(lines[0].split(' ')[0].strip())
         print(schedule(m, lines[1::]))
